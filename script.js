@@ -12,22 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
       clockTime.textContent = `${hours}:${minutes}:${seconds}`;
 
       const options = { weekday: "short", month: "short", day: "numeric" };
-      clockDate.textContent = now.toLocaleString('pt-BR', options);
+      clockDate.textContent = now.toLocaleDateString("en-US", options);
     }
   }
-  const dataHora = new Date('2023-10-27T15:30:00');
-  const opcoes = {
-    timeZone: 'America/Sao_Paulo',
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-  };
-  
-  const dataHoraBrasil = dataHora.toLocaleString('pt-BR', opcoes);
-
 
   updateClock();
   setInterval(updateClock, 1000);
