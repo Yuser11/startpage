@@ -8,12 +8,26 @@ document.addEventListener("DOMContentLoaded", () => {
     if (clockTime && clockDate) {
       const hours = String(now.getHours()).padStart(2, "0");
       const minutes = String(now.getMinutes()).padStart(2, "0");
-      clockTime.textContent = `${hours}:${minutes}`;
+      const seconds = String(now.getSeconds()).padStart(2, "0");
+      clockTime.textContent = `${hours}:${minutes}:${seconds}`;
 
       const options = { weekday: "short", month: "short", day: "numeric" };
-      clockDate.textContent = now.toLocaleDateString("en-US", options);
+      clockDate.textContent = now.toLocaleString('pt-BR', options);
     }
   }
+  const dataHora = new Date('2023-10-27T15:30:00');
+  const opcoes = {
+    timeZone: 'America/Sao_Paulo',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+  };
+  
+  const dataHoraBrasil = dataHora.toLocaleString('pt-BR', opcoes);
+
 
   updateClock();
   setInterval(updateClock, 1000);
@@ -38,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (prefix in shortcuts && searchTerm) {
         window.location.href = shortcuts[prefix];
       } else {
-        window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+        window.location.href = `https://www.startpage.com/search?q=${encodeURIComponent(query)}`;
       }
     }
   });
