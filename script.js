@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "y:": `https://www.youtube.com/results?search_query=${searchTerm}`,
         "r:": `https://www.reddit.com/search?q=${searchTerm}`,
         "gh:": `https://github.com/search?q=${searchTerm}`,
+        "sdb:": `https://steamdb.info/search/?a=all&q=${searchTerm}`,
+        "st:": `https://store.steampowered.com/search/?l=portuguese&q=${searchTerm}`,
+
       };
 
       if (prefix in shortcuts && searchTerm) {
