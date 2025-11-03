@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "r:": `https://www.reddit.com/search?q=${searchTerm}`,
         "gh:": `https://github.com/search?q=${searchTerm}`,
         "sdb:": `https://steamdb.info/search/?a=all&q=${searchTerm}`,
-        "st:": `https://store.steampowered.com/search/?l=portuguese&q=${searchTerm}`,
+        "st:": `https://store.steampowered.com/search/?term=${searchTerm}&ndl=1`,
 
       };
 
