@@ -37,7 +37,7 @@ body {
   /*
   background-color: var(--bg-alt);
   */
-  background-image: url(/img/background.jpg);
+  background-image: url(background.jpg);
   background-size: cover;
   color: var(--fg);
   font-family: sans-serif;
